@@ -35,7 +35,6 @@ class GradientGraph:
 
         df_dv = -1 / v ** 2
         dv_dw2 = -1 * self.x2 * np.sin(self.x2 * self.w2)
-        print(dv_dw2)
 
         df_dw2 = df_dv * dv_dw2 #Key line: apply chain rule to get gradient with respect to w2
         self.grad2 = df_dw2
@@ -46,5 +45,5 @@ a.setweights(1, 1)
 a.compute_gradw1()
 a.compute_gradw2()
 #
-# print(a.grad1) #gradient of w1 #when x1 is pi/4 and w1 is 1, the gradient with respect to w1 is -0.07
+print(a.grad1) #gradient of w1 #when x1 is pi/4 and w1 is 1, the gradient with respect to w1 is -0.07
 print(a.grad2) #gradient of w2 #when x2 is pi/4 and w2 is 1, the gradient with respect to w2 is 0.05
